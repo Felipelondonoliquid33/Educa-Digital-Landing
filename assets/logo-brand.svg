@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none" class="brand-logo">
+  <!-- Left Hemisphere: Organic (Creative/Human) -->
+  <path d="M48 15C35 15 25 25 25 38C25 45 28 50 32 55C28 60 26 65 26 72C26 85 35 92 48 92" 
+        stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Organic Gyri details -->
+  <path d="M35 25C32 28 30 32 32 36C34 40 40 38 42 34" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+  <path d="M30 45C32 48 38 48 40 44" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+  <path d="M30 65C32 60 40 62 42 66" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+  <path d="M35 82C38 80 42 82 44 85" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- Gap -->
+  
+  <!-- Right Hemisphere: Digital (Tech/Logic) - Circuit Board Style -->
+  <path d="M52 15C65 15 75 25 75 38C75 45 72 50 68 55C72 60 74 65 74 72C74 85 65 92 52 92" 
+        stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+        
+  <!-- Circuit Traces -->
+  <path d="M62 25L68 25L68 32" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="68" cy="32" r="2.5" fill="currentColor"/>
+  
+  <path d="M58 45L66 45L66 40" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+  
+  <path d="M60 62L70 62" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="60" cy="62" r="2.5" fill="currentColor"/>
+  
+  <path d="M58 80L64 80L64 75" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="64" cy="75" r="2.5" fill="currentColor"/>
+  
+  <path d="M52 15L52 92" stroke="currentColor" stroke-width="2" stroke-dasharray="4 4" opacity="0.5"/>
+</svg>
