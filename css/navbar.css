@@ -1,10 +1,11 @@
 .navbar {
     position: fixed;
     width: 100%;
-    height: 75px;
-    padding: 0 1em;
+    height: 80px;
+    padding: 0 2em;
     color: var(--color-text-primary);
     z-index: 100000;
+    transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 .navbar:before {
@@ -14,10 +15,23 @@
     left: 0;
     width: 100%;
     height: 100%;
-    backdrop-filter: blur(30px) saturate(120%) !important;
-    -webkit-backdrop-filter: blur(30px) saturate(120%) !important;
-    border-bottom: 1px solid var(--color-border);
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
     z-index: -1;
+    transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+/* Efecto de sombra al hacer scroll */
+.navbar.scrolled {
+    height: 70px;
+}
+
+.navbar.scrolled:before {
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.06), 0 2px 8px rgba(99, 102, 241, 0.08);
+    border-bottom: 1px solid rgba(99, 102, 241, 0.12);
 }
 
 .navbar .container {
@@ -25,15 +39,24 @@
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    max-width: 1000px;
+    max-width: 1200px;
+    height: 100%;
 }
 
 .hamburger-icon {
     display: none;
     cursor: pointer;
     color: #1a1a1a;
-    font-size: 24px;
+    font-size: 26px;
     line-height: 55px;
+    transition: all 0.3s ease;
+    padding: 8px;
+    border-radius: 8px;
+}
+
+.hamburger-icon:hover {
+    transform: scale(1.1);
+    background: rgba(99, 102, 241, 0.08);
 }
 
 .hamburger-icon i {
@@ -46,7 +69,7 @@
 }
 
 .navbar-logo {
-    font-size: 17px;
+    font-size: 18px;
     font-weight: 600;
     display: flex;
     align-items: center;
@@ -57,13 +80,24 @@
     align-items: center;
     text-decoration: none;
     color: inherit;
+    transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.navbar-logo a:hover {
+    transform: scale(1.03);
+    filter: brightness(1.1);
 }
 
 .navbar-logo img {
     display: block;
-    height: 65px;
+    height: 60px;
     width: auto;
     object-fit: contain;
+    transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.navbar.scrolled .navbar-logo img {
+    height: 52px;
 }
 
 .navbar-logo i {
@@ -76,28 +110,97 @@
 .navbar-items ul {
     display: flex;
     list-style: none;
+    gap: 8px;
+    align-items: center;
 }
 
 .navbar-items ul li {
-    line-height: 55px;
-    font-size: 14px;
+    font-size: 15px;
     font-weight: 500;
 }
 
 .navbar-items ul li a {
-    padding: 1em;
+    padding: 10px 18px;
     cursor: pointer;
+    position: relative;
+    transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+    border-radius: 12px;
+    display: inline-block;
+    color: #374151;
+}
+
+.navbar-items ul li a:after {
+    content: '';
+    position: absolute;
+    bottom: 6px;
+    left: 50%;
+    transform: translateX(-50%) scaleX(0);
+    width: 70%;
+    height: 2.5px;
+    background: linear-gradient(90deg, #6366f1 0%, #8b5cf6 100%);
+    border-radius: 2px;
+    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.navbar-items ul li a:hover {
+    color: #6366f1;
+    background: rgba(99, 102, 241, 0.06);
+    transform: translateY(-1px);
+}
+
+.navbar-items ul li a:hover:after {
+    transform: translateX(-50%) scaleX(1);
 }
 
 .navbar-items .btn {
-    line-height: 55px;
-    margin-left: 80px;
+    margin-left: 24px;
 }
 
 .navbar-items .btn a {
-    padding: 10px 20px !important;
-    background: var(--color-brand-bg);
-    border-radius: 40px;
+    padding: 11px 26px !important;
+    background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+    color: #ffffff !important;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 0.3px;
+    box-shadow: 0 4px 16px rgba(99, 102, 241, 0.35), 
+                0 2px 8px rgba(99, 102, 241, 0.2);
+    transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.navbar-items .btn a:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.25), transparent);
+    transition: left 0.7s ease;
+}
+
+.navbar-items .btn a:hover {
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 8px 28px rgba(99, 102, 241, 0.45), 
+                0 4px 12px rgba(99, 102, 241, 0.3);
+    background: linear-gradient(135deg, #7c3aed 0%, #a855f7 100%);
+}
+
+.navbar-items .btn a:hover:after {
+    transform: translateX(-50%) scaleX(0);
+}
+
+.navbar-items .btn a:hover:before {
+    left: 100%;
+}
+
+.navbar-items .btn a:active {
+    transform: translateY(0px) scale(0.98);
 }
 
 @media screen and (max-width:805px) {
