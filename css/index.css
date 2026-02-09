@@ -356,6 +356,9 @@ section.tools {
     backface-visibility: hidden;
     will-change: transform;
     pointer-events: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .card-icon svg {
@@ -363,6 +366,8 @@ section.tools {
     shape-rendering: geometricPrecision;
     image-rendering: -webkit-optimize-contrast;
     image-rendering: crisp-edges;
+    display: block;
+    margin: 0 auto;
 }
 
 .card-icon i {

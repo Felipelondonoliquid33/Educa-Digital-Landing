@@ -50,7 +50,7 @@ class HeroBackground {
             this.particles.push({
                 x: Math.random() * this.canvas.width,
                 y: Math.random() * this.canvas.height,
-                size: Math.random() * 4 + 2,
+                size: Math.random() * 6 + 3,
                 speedX: (Math.random() - 0.5) * 0.5,
                 speedY: (Math.random() - 0.5) * 0.5,
                 shape: shapes[Math.floor(Math.random() * shapes.length)],
