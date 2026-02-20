@@ -1,0 +1,272 @@
+/* Courses Page Styles - Modern & Interactive */
+
+:root {
+  --primary: #6366f1;
+  --secondary: #a855f7;
+  --accent: #22d3ee;
+  --dark-bg: #0f172a;
+  --card-bg: #ffffff;
+  --text-primary: #1e293b;
+  --text-secondary: #64748b;
+  --gradient-brand: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
+}
+
+.courses-page {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Hero Section */
+.courses-hero {
+    padding: 180px 0 100px;
+    text-align: center;
+    position: relative;
+}
+
+.courses-hero h1 {
+    font-size: 4rem;
+    line-height: 1.1;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(to right, #0ea5e9, #2563eb);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: -0.02em;
+}
+
+.courses-hero p {
+    font-size: 1.25rem;
+    color: var(--text-secondary);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Modality Badge */
+.modality-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(34, 211, 238, 0.1);
+    border: 1px solid rgba(34, 211, 238, 0.3);
+    padding: 10px 20px;
+    border-radius: 50px;
+    margin-top: 40px;
+    color: #0891b2;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.modality-badge i {
+    font-size: 1.2rem;
+}
+
+/* Course Categories Grid */
+.courses-grid-section {
+    padding: 80px 0 120px;
+    position: relative;
+}
+
+.course-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    padding: 20px;
+}
+
+.course-card {
+    background: var(--card-bg);
+    border-radius: 24px;
+    padding: 2.5rem;
+    position: relative;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid rgba(226, 232, 240, 0.8);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.course-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px -5px rgba(99, 102, 241, 0.15);
+    border-color: rgba(99, 102, 241, 0.3);
+}
+
+/* Icon Styles */
+.card-icon {
+    width: 64px;
+    height: 64px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    margin-bottom: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.course-card:hover .card-icon {
+    transform: scale(1.1) rotate(5deg);
+}
+
+/* Gradient Variants for Cards */
+.card-tic .card-icon { background: #eff6ff; color: #3b82f6; } /* Blue - TIC */
+.card-ai .card-icon { background: #fdf4ff; color: #a855f7; } /* Purple - AI */
+.card-lms .card-icon { background: #fff7ed; color: #f97316; } /* Orange - Moodle */
+.card-content .card-icon { background: #f0fdf4; color: #22c55e; } /* Green - Content */
+.card-finance .card-icon { background: #fefce8; color: #eab308; } /* Yellow - Finance */
+.card-soft .card-icon { background: #ecfeff; color: #06b6d4; } /* Cyan - Soft Skills */
+
+.course-card h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+    line-height: 1.3;
+}
+
+.course-card p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    flex-grow: 1;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+    border-top: 1px solid #f1f5f9;
+    padding-top: 1.5rem;
+}
+
+.tag {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    background: #f8fafc;
+    padding: 6px 12px;
+    border-radius: 8px;
+}
+
+.card-cta {
+    color: var(--primary);
+    font-weight: 700;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.9rem;
+    opacity: 0;
+    transform: translateX(-10px);
+    transition: all 0.3s ease;
+}
+
+.course-card:hover .card-cta {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Interactive Background Shapes in Section */
+.shape-blob {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    z-index: -1;
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+.shape-1 {
+    width: 400px;
+    height: 400px;
+    background: #e0e7ff;
+    top: 10%;
+    left: -100px;
+}
+
+.shape-2 {
+    width: 300px;
+    height: 300px;
+    background: #fce7f3;
+    bottom: 20%;
+    right: -50px;
+}
+
+/* Certification Banner */
+.cert-banner {
+    background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+    border-radius: 32px;
+    padding: 4rem;
+    margin-top: 60px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    color: white;
+}
+
+.cert-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.cert-banner h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(to right, #fff, #94a3b8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.cert-banner p {
+    color: #cbd5e1;
+    font-size: 1.1rem;
+    margin-bottom: 2.5rem;
+}
+
+.glow-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--gradient-brand);
+    color: white;
+    padding: 16px 32px;
+    border-radius: 50px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 20px rgba(99, 102, 241, 0.5);
+}
+
+.glow-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 30px rgba(99, 102, 241, 0.7);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .course-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .course-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .courses-hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .cert-banner {
+        padding: 3rem 1.5rem;
+    }
+}

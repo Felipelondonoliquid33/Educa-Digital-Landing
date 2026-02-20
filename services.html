@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="EducaDigital" />
+    <title>Servicios | EducaDigital</title>
+    <!-- Favicon -->
+    <link rel="icon" href="assets/logo-brand.svg" type="image/svg+xml">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/navbar.css" />
+    <link rel="stylesheet" href="./css/footer.css" />
+    <link rel="stylesheet" href="./css/responsive.css" />
+    <link rel="stylesheet" href="./css/services.css" />
+    <link rel="stylesheet" href="./css/clients.css" /> <!-- New Clients CSS -->
+    
+    <!-- Scripts -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <script src="./js/hero-background.js" defer></script>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="container">
+        <div class="navbar-logo">
+          <a href="index.html">
+            <img src="assets/cropped-Purple-and-Yellow-Modern-Abstract-Digital-World-Technology-Logo.svg" alt="Educa Digital" class="logo-img">
+          </a>
+        </div>
+        <div class="navbar-items">
+          <input type="checkbox" id="hamburger-toggle" />
+          <label for="hamburger-toggle" class="hamburger-icon">
+            <i class="ph-light ph-list"></i>
+          </label>
+          <ul class="navbar-links">
+            <li class="navbar-item"><a href="./company.html">Nosotros</a></li>
+            <li class="navbar-item"><a href="./services.html" class="active">Servicios</a></li>
+            <li class="navbar-item"><a href="./blog.html">Cursos</a></li>
+            <li class="navbar-item"><a href="./contact.html">Contacto</a></li>
+            <li>
+              <div class="btn">
+                <a href="./contact.html">Escríbenos</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="wrapper">
+      <!-- Gradient Background -->
+      <div class="radial-gradient"></div>
+
+      <!-- Hero Section (Required for Animation Script) -->
+      <section class="hero services-hero">
+        <div class="container">
+          <div class="hero-header">
+            <h1>Soluciones Digitales Educativas</h1>
+          </div>
+          <div class="hero-copy" style="max-width: 700px; margin: 0 auto; color: var(--text-light);">
+            <p>Transformamos la educación a través de tecnología, innovación y pedagogía. Descubre cómo podemos potenciar tu institución.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Services Content -->
+      <div class="services-container">
+        
+        <!-- Service Bundle 1 -->
+        <article class="service-section">
+          <!-- Text Content (Left) -->
+          <div class="service-content">
+            <div class="service-title-wrapper">
+              <div class="service-bar"></div>
+              <h2 class="service-title">
+                Nuestros<br>
+                <span>servicios</span>
+              </h2>
+            </div>
+            
+            <ul class="service-list">
+              <li><i class="ph-fill ph-check-circle" style="color: #6366f1; margin-right: 10px;"></i> Cursos virtuales personalizados</li>
+              <li><i class="ph-fill ph-check-circle" style="color: #6366f1; margin-right: 10px;"></i> Instalación y configuración de Moodle y LMS</li>
+              <li><i class="ph-fill ph-check-circle" style="color: #6366f1; margin-right: 10px;"></i> Desarrollo de páginas web</li>
+              <li><i class="ph-fill ph-check-circle" style="color: #6366f1; margin-right: 10px;"></i> Diseño de contenidos digitales interactivos (OVA'S)</li>
+              <li><i class="ph-fill ph-check-circle" style="color: #6366f1; margin-right: 10px;"></i> Renders 360° y recorridos virtuales</li>
+            </ul>
+          </div>
+
+          <!-- Image Content (Right) -->
+          <div class="service-image-wrapper">
+            <div class="service-card">
+              <img src="assets/services-dev.svg" alt="Ilustración de servicios de desarrollo y plataforma" class="service-illustration">
+            </div>
+          </div>
+        </article>
+
+        <!-- Service Bundle 2 -->
+        <article class="service-section">
+          <!-- Text Content (Left in DOM, reversed to Right by CSS) -->
+          <div class="service-content">
+            <div class="service-title-wrapper">
+              <div class="service-bar" style="background: linear-gradient(to bottom, #a855f7, #ec4899);"></div>
+              <h2 class="service-title" style="color: #0ea5e9;">
+                Nuestros<br>
+                <span>servicios</span>
+              </h2>
+            </div>
+            
+            <ul class="service-list">
+              <li><i class="ph-fill ph-check-circle" style="color: #a855f7; margin-right: 10px;"></i> Locución profesional y voz en off</li>
+              <li><i class="ph-fill ph-check-circle" style="color: #a855f7; margin-right: 10px;"></i> Hosting y soporte técnico</li>
+              <li><i class="ph-fill ph-check-circle" style="color: #a855f7; margin-right: 10px;"></i> Producción audiovisual (fotografías, videos profesionales)</li>
+              <li><i class="ph-fill ph-check-circle" style="color: #a855f7; margin-right: 10px;"></i> Transmisión de streaming</li>
+              <li><i class="ph-fill ph-check-circle" style="color: #a855f7; margin-right: 10px;"></i> Diseño instruccional, multimedia y virtualización de contenidos educativos</li>
+              <li><i class="ph-fill ph-check-circle" style="color: #a855f7; margin-right: 10px;"></i> Consultoría en transformación digital educativa</li>
+            </ul>
+          </div>
+          
+           <!-- Image Content (Left in DOM, reversed to Right by CSS) -->
+           <div class="service-image-wrapper">
+            <div class="service-card">
+               <img src="assets/services-media.svg" alt="Ilustración de servicios audiovisuales y streaming" class="service-illustration">
+            </div>
+          </div>
+        </article>
+
+        <div class="services-note">
+          <p>TODOS NUESTROS SERVICIOS INCLUYEN ACOMPAÑAMIENTO PEDAGÓGICO Y SOPORTE TÉCNICO.</p>
+        </div>
+
+        <!-- AESTHETIC RE-DESIGN: Clients & Experience Component -->
+        <div class="clients-experience-section">
+          <div class="clients-container">
+            
+            <!-- Left: Typography & Features -->
+            <div class="clients-content">
+              <div class="clients-header">
+                <span class="clients-super-title">Trayectoria</span>
+                <h2 class="clients-title">
+                  Clientes y <br>Experiencia
+                </h2>
+              </div>
+
+              <div class="clients-features">
+                <!-- Feature 1 -->
+                <div class="client-feature-item">
+                  <div class="feature-icon-box">
+                    <i class="ph-fill ph-buildings"></i>
+                  </div>
+                  <div class="feature-text">
+                    <h3>Proyectos Multisectoriales</h3>
+                    <p>Experiencia comprobada con empresas, instituciones educativas, ONGs y entes gubernamentales.</p>
+                  </div>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="client-feature-item">
+                  <div class="feature-icon-box" style="background: #fdf4ff; color: #d946ef;">
+                    <i class="ph-fill ph-users-three"></i>
+                  </div>
+                  <div class="feature-text">
+                    <h3>Enfoque Integral</h3>
+                    <p>Formación digital con perspectiva social y técnica, incluyendo acompañamiento pedagógico completo.</p>
+                  </div>
+                </div>
+
+                <!-- Highlight Box -->
+                <div class="highlight-box">
+                  <p>Soluciones a la medida de tu proyecto.</p>
+                  <p class="highlight-sub">CREATIVIDAD, CERCANÍA Y COMPROMISO</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right: Image Composition -->
+            <div class="clients-image-composition">
+              <!-- Decorative Blobs -->
+              <div class="bg-shape-1"></div>
+              <div class="bg-shape-2"></div>
+              
+              <!-- Floating Pill/Capsule -->
+              <div class="clients-time-capsule" style="top: 10%; right: 10%;">
+                 <i class="ph-fill ph-star capsule-icon"></i>
+                 <div class="capsule-text">
+                   <strong>+10 Años</strong>
+                   <span>de experiencia</span>
+                 </div>
+              </div>
+
+              <!-- Main Image Frame -->
+              <div class="main-img-frame">
+                <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Clientes colaborando en proyectos educativos" loading="lazy">
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Divider -->
+      <div class="divider"></div>
+
+      <!-- Footer (Identical to index.html) -->
+      <footer>
+        <div class="container">
+          <div class="footer-brand">
+            <p>
+              <svg width="28" height="28" viewBox="0 0 200 200" class="logo-brain" style="vertical-align: middle; margin-right: 8px;">
+                <path d="M70,30 Q50,30 40,50 Q35,65 40,80 Q38,95 45,110 Q50,125 60,135 Q70,145 80,150 L80,70 Q75,60 70,50 Q68,40 70,30 Z" 
+                      fill="currentColor" stroke="currentColor" stroke-width="2"/>
+                <path d="M50,45 Q48,50 50,55 M55,65 Q53,70 55,75 M60,85 Q58,90 60,95 M65,105 Q63,110 65,115" 
+                      stroke="currentColor" stroke-width="1.5" fill="none"/>
+                <path d="M130,30 Q150,30 160,50 Q165,65 160,80 Q162,95 155,110 Q150,125 140,135 Q130,145 120,150 L120,70 Q125,60 130,50 Q132,40 130,30 Z" 
+                      fill="currentColor" stroke="currentColor" stroke-width="2"/>
+                <line x1="130" y1="50" x2="145" y2="50" stroke="currentColor" stroke-width="2"/>
+                <line x1="145" y1="50" x2="145" y2="65" stroke="currentColor" stroke-width="2"/>
+                <circle cx="145" cy="65" r="3" fill="currentColor"/>
+                <line x1="135" y1="70" x2="150" y2="70" stroke="currentColor" stroke-width="2"/>
+                <circle cx="150" cy="70" r="3" fill="currentColor"/>
+                <line x1="130" y1="90" x2="145" y2="90" stroke="currentColor" stroke-width="2"/>
+                <line x1="145" y1="90" x2="145" y2="105" stroke="currentColor" stroke-width="2"/>
+                <circle cx="145" cy="105" r="3" fill="currentColor"/>
+                <line x1="125" y1="110" x2="140" y2="110" stroke="currentColor" stroke-width="2"/>
+                <line x1="140" y1="110" x2="140" y2="125" stroke="currentColor" stroke-width="2"/>
+                <circle cx="140" cy="125" r="3" fill="currentColor"/>
+                <path d="M80,70 L120,70 M80,90 L120,90 M80,110 L120,110 M80,130 L120,130" 
+                      stroke="currentColor" stroke-width="1.5" opacity="0.6"/>
+              </svg>
+              EducaDigital
+            </p>
+            <div class="socials">
+              <a href="#"><i class="ph-fill ph-twitter-logo"></i></a>
+              <a href="#"><i class="ph-fill ph-facebook-logo"></i></a>
+              <a href="#"><i class="ph-fill ph-instagram-logo"></i></a>
+            </div>
+          </div>
+          <div class="footer-links">
+            <div class="footer-col">
+              <p>Cursos</p>
+              <p><a href="#">Programación Web</a></p>
+              <p><a href="#">Bases de Datos</a></p>
+              <p><a href="#">Desarrollo Móvil</a></p>
+              <p><a href="#">Cloud Computing</a></p>
+              <p><a href="#">Inteligencia Artificial</a></p>
+              <p><a href="#">Ciberseguridad</a></p>
+              <p><a href="./blog.html">Ver Todos</a></p>
+            </div>
+            <div class="footer-col">
+              <p>Empresa</p>
+              <p><a href="./company.html">Nosotros</a></p>
+              <p><a href="#">Blog</a></p>
+              <p><a href="#">Nuestro Equipo</a></p>
+              <p><a href="./contact.html">Contacto</a></p>
+              <p><a href="#">Trabaja con Nosotros</a></p>
+            </div>
+            <div class="footer-col">
+              <p>Recursos</p>
+              <p><a href="#">Preguntas Frecuentes</a></p>
+              <p><a href="#">Soporte Técnico</a></p>
+              <p><a href="#">Términos y Condiciones</a></p>
+              <p><a href="#">Política de Privacidad</a></p>
+              <p><a href="#">Certificados</a></p>
+            </div>
+            <div class="footer-col">
+              <p>Soluciones</p>
+              <p><a href="#">Para Empresas</a></p>
+              <p><a href="#">Para Instituciones</a></p>
+              <p><a href="#">Rutas de Aprendizaje</a></p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <!-- Navbar Script -->
+    <script>
+      (function() {
+        const navbar = document.querySelector('.navbar');
+        let lastScroll = 0;
+        
+        window.addEventListener('scroll', () => {
+          const currentScroll = window.pageYOffset;
+          if (currentScroll > 50) {
+            navbar.classList.add('scrolled');
+          } else {
+            navbar.classList.remove('scrolled');
+          }
+          lastScroll = currentScroll;
+        });
+        
+        const navLinks = document.querySelectorAll('.navbar-items ul li a');
+        navLinks.forEach(link => {
+          link.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateY(-2px)';
+          });
+          
+          link.addEventListener('mouseleave', function() {
+            this.style.transform = 'translateY(0)';
+          });
+        });
+      })();
+    </script>
+  </body>
+</html>

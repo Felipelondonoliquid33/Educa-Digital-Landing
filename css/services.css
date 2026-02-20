@@ -1,0 +1,229 @@
+/* Services Page Styles */
+
+/* Reuse global variables if available, otherwise define defaults matching the theme */
+:root {
+  --primary: #6366f1;
+  --primary-dark: #4f46e5;
+  --secondary: #a855f7;
+  --text-dark: #1e293b; 
+  --text-light: #64748b;
+  --bg-light: #f8fafc;
+  --white: #ffffff;
+  --transparent: transparent;
+}
+
+/* Background Gradients & Animation Styles (Copied from Index for consistency) */
+.radial-gradient {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 150vh;
+    background: radial-gradient(ellipse 80% 75% at 50% -25%,rgba(120,119,198,0.15),var(--transparent));
+    pointer-events: none;
+    z-index: 0;
+}
+
+.hero-background-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    z-index: 0;
+    pointer-events: none;
+    opacity: 0.8;
+}
+
+/* Service Hero Section - Minimalist */
+.services-hero {
+  padding-top: 180px;
+  padding-bottom: 80px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.services-hero h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #1e293b 0%, #6366f1 50%, #a855f7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.02em;
+}
+
+/* Service Sections Container */
+.services-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  position: relative;
+  z-index: 2;
+}
+
+/* Individual Service Section Component */
+.service-section {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  margin-bottom: 8rem;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 0.8s ease-out forwards;
+}
+
+.service-section:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Delay animations for sequential appearance */
+.service-section:nth-child(1) { animation-delay: 0.2s; }
+.service-section:nth-child(2) { animation-delay: 0.4s; }
+
+/* Service Text Content */
+.service-content {
+  flex: 1;
+}
+
+/* Aesthetic Title with Blue Bar */
+.service-title-wrapper {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  margin-bottom: 2rem;
+}
+
+.service-bar {
+  width: 8px;
+  height: 60px;
+  background: linear-gradient(to bottom, #22d3ee, #6366f1);
+  border-radius: 4px;
+}
+
+.service-title {
+  font-size: 3.5rem;
+  line-height: 1.1;
+  font-weight: 800;
+  color: #0ea5e9; /* Cyan-500ish base */
+  font-family: system-ui, -apple-system, sans-serif;
+  margin: 0;
+}
+
+.service-title span {
+  display: block;
+  color: #0ea5e9;
+}
+
+/* List Styling */
+.service-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.service-list li {
+  font-size: 1.1rem;
+  color: #2c7da0; /* Muted blue/cyan text */
+  margin-bottom: 1.5rem;
+  padding-left: 0;
+  position: relative;
+  transition: transform 0.2s ease, color 0.2s ease;
+  cursor: default;
+}
+
+.service-list li:hover {
+  transform: translateX(5px);
+  color: #0284c7;
+}
+
+/* Service Image Card - Glassmorphism/Techy */
+.service-image-wrapper {
+  flex: 1;
+  position: relative;
+}
+
+.service-card {
+  background: white;
+  border-radius: 50px 20px 50px 20px; /* Asymmetric organic shape from image */
+  overflow: hidden;
+  box-shadow: 
+    0 20px 40px rgba(0, 0, 0, 0.05),
+    0 1px 3px rgba(0,0,0,0.1);
+  position: relative;
+  transition: transform 0.3s ease;
+  height: 400px;
+}
+
+.service-section:nth-child(even) .service-card {
+  border-radius: 20px 50px 20px 50px; /* Reversed for alternation */
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+}
+
+.service-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Note Footer */
+.services-note {
+  text-align: center;
+  margin-top: 4rem;
+  margin-bottom: 6rem;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,0.5);
+}
+
+.services-note p {
+  color: #0ea5e9;
+  font-weight: 800;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .service-section, 
+  .service-section:nth-child(even) {
+    flex-direction: column;
+    gap: 2rem;
+    text-align: left;
+  }
+  
+  .service-title-wrapper {
+    justify-content: flex-start;
+  }
+  
+  .service-bar {
+    height: 50px;
+  }
+  
+  .service-title {
+    font-size: 2.5rem;
+  }
+
+  .service-image-wrapper {
+    width: 100%;
+  }
+  
+  .service-card {
+    height: 300px;
+  }
+}

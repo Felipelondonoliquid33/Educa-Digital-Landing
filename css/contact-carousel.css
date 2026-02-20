@@ -1,0 +1,107 @@
+/* Carousel / Multi-step Form Styles */
+.carousel-form {
+    position: relative;
+    overflow: hidden;
+    min-height: 400px; /* Ensure consistent height to prevent jumps */
+    display: flex;
+    flex-direction: column;
+}
+
+.form-step {
+    display: none;
+    animation: fadeIn 0.4s ease forwards;
+    flex: 1;
+}
+
+.form-step.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateX(10px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+.step-desc {
+    font-size: 0.95rem;
+    color: #6b7280;
+    margin-bottom: 24px;
+    margin-top: -8px; 
+}
+
+/* Progress Indicators */
+.form-progress {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 30px;
+}
+
+.step-dot {
+    width: 10px;
+    height: 10px;
+    background: #e5e7eb;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.step-dot.active {
+    background: #6366f1;
+    transform: scale(1.2);
+    box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.2);
+}
+
+/* Navigation Buttons */
+.form-nav {
+    display: flex;
+    gap: 16px;
+    margin-top: auto; /* Push to bottom */
+    padding-top: 20px;
+}
+
+.nav-btn {
+    padding: 16px 24px;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    transition: all 0.2s ease;
+}
+
+.nav-btn.prev {
+    background: #f3f4f6;
+    color: #4b5563;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.nav-btn.prev:hover {
+    background: #e5e7eb;
+}
+
+/* Submit/Next button reusing existing .submit-btn styles but modifying width */
+.form-nav .submit-btn {
+    flex: 2; /* Make main button larger */
+}
+
+/* Error State */
+.input-wrapper.error {
+    border: 1px solid #ef4444;
+    animation: shake 0.5s ease;
+}
+
+.input-wrapper.error i {
+    color: #ef4444;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    75% { transform: translateX(5px); }
+}
+
+.form-step.shake {
+    animation: shake 0.4s ease-in-out;
+}

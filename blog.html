@@ -1,24 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content="EducaDigital" />
-    <title>Cursos | EducaDigital | Catálogo Completo</title>
+    <title>Cursos | EducaDigital</title>
+    <!-- Favicon -->
+    <link rel="icon" href="assets/logo-brand.svg" type="image/svg+xml">
+    
+    <!-- CSS -->
     <link rel="stylesheet" href="./css/main.css" />
-    <link rel="stylesheet" href="./css/blog.css" />
-    <link rel="stylesheet" href="./css/contact.css" />
     <link rel="stylesheet" href="./css/navbar.css" />
-    <link rel="stylesheet" href="./css/index.css" />
     <link rel="stylesheet" href="./css/footer.css" />
     <link rel="stylesheet" href="./css/responsive.css" />
+    <link rel="stylesheet" href="./css/courses.css" />
+    
+    <!-- Scripts -->
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <script src="./js/hero-background.js" defer></script>
   </head>
   <body>
+    <!-- Navbar -->
     <nav class="navbar">
       <div class="container">
         <div class="navbar-logo">
-          <a href="index.html"><i class="ph-fill ph-graduation-cap"></i> EducaDigital</a>
+          <a href="index.html">
+            <img src="assets/cropped-Purple-and-Yellow-Modern-Abstract-Digital-World-Technology-Logo.svg" alt="Educa Digital" class="logo-img">
+          </a>
         </div>
         <div class="navbar-items">
           <input type="checkbox" id="hamburger-toggle" />
@@ -26,13 +34,13 @@
             <i class="ph-light ph-list"></i>
           </label>
           <ul class="navbar-links">
-            <!-- <li class="navbar-item"><a href="./pricing.html">Precios</a></li> -->
             <li class="navbar-item"><a href="./company.html">Nosotros</a></li>
-            <li class="navbar-item"><a href="./blog.html">Cursos</a></li>
+            <li class="navbar-item"><a href="./services.html">Servicios</a></li>
+            <li class="navbar-item"><a href="./blog.html" class="active">Cursos</a></li>
             <li class="navbar-item"><a href="./contact.html">Contacto</a></li>
             <li>
               <div class="btn">
-                <a href="#">Inscríbete</a>
+                <a href="./contact.html">Escríbenos</a>
               </div>
             </li>
           </ul>
@@ -41,199 +49,227 @@
     </nav>
 
     <div class="wrapper">
+      <!-- Background Shapes -->
       <div class="radial-gradient"></div>
-
-      <div class="page-content blog-page">
-        <section class="hero">
+      
+      <div class="page-content courses-page">
+        <!-- Hero Section -->
+        <section class="courses-hero">
           <div class="container">
-            <div class="hero-header">
-              <h1>Nuestros Cursos</h1>
-              <div class="toggle-icons">
-                <p>Filtrar por categoría</p>
-                <p>/</p>
-                <a><i class="ph-fill ph-funnel"></i></a>
-                <a><i class="ph-fill ph-heart"></i> </a>
-                <a><i class="ph-fill ph-share-network"></i> </a>
-              </div>
+            <div class="gradient-text-wrapper">
+                <h1>Potencia tu Futuro<br>con Habilidades Digitales</h1>
+            </div>
+            <p>
+              Explora nuestra oferta académica diseñada para las demandas del siglo XXI. 
+              Formación práctica, certificada y adaptada a tus necesidades profesionales.
+            </p>
+            
+            <div class="modality-container">
+                <div class="modality-badge">
+                    <i class="ph-fill ph-certificate"></i>
+                    <span>Modalidad Virtual o Híbrida con Certificación</span>
+                </div>
             </div>
           </div>
         </section>
 
-        <section class="contact-cards">
-          <div class="container">
-            <div class="contact-card">
-              <div class="blog-img">
-                <img src="./assets/blog-1.jpg" alt="" />
-              </div>
-              <p>Desarrollo Web Full Stack</p>
-              <span>
-                Aprende a crear aplicaciones web completas desde cero. Domina HTML, CSS, 
-                JavaScript, React, Node.js y bases de datos.
-              </span>
+        <!-- Courses Grid -->
+        <section class="courses-grid-section">
+            <!-- Floating Blobs for decoration -->
+            <div class="shape-blob shape-1"></div>
+            <div class="shape-blob shape-2"></div>
+            
+            <div class="container">
+                <div class="course-grid">
+                    
+                    <!-- Card 1: TIC -->
+                    <div class="course-card card-tic">
+                        <div class="card-icon-wrapper">
+                            <div class="card-icon">
+                                <i class="ph-fill ph-desktop"></i>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <h3>TIC y Herramientas Digitales</h3>
+                            <p>Domina las tecnologías de la información y comunicación para optimizar procesos educativos y laborales con herramientas modernas.</p>
+                        </div>
+                        <div class="card-footer">
+                            <span class="tag">Intermedio</span>
+                            <div class="card-cta">
+                                <i class="ph-bold ph-arrow-right"></i>
+                            </div>
+                        </div>
+                    </div>
 
-              <div class="hero-callout">
-                <a href="./pricing.html">Ver Detalles</a>
-                <i class="ph ph-caret-right"></i>
-              </div>
+                    <!-- Card 2: AI -->
+                    <div class="course-card card-ai">
+                        <div class="card-icon-wrapper">
+                            <div class="card-icon">
+                                <i class="ph-fill ph-robot"></i>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <h3>Inteligencia Artificial Básica</h3>
+                            <p>Aprende los fundamentos de la IA y cómo aplicarla en herramientas cotidianas para aumentar tu productividad y creatividad.</p>
+                        </div>
+                        <div class="card-footer">
+                            <span class="tag">Tendencia</span>
+                            <div class="card-cta">
+                                <i class="ph-bold ph-arrow-right"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 3: LMS -->
+                    <div class="course-card card-lms">
+                        <div class="card-icon-wrapper">
+                            <div class="card-icon">
+                                <i class="ph-fill ph-student"></i>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <h3>Moodle y Google Classroom</h3>
+                            <p>Gestión avanzada de plataformas LMS para la creación eficiente y administración de entornos virtuales de aprendizaje.</p>
+                        </div>
+                        <div class="card-footer">
+                            <span class="tag">Docentes</span>
+                            <div class="card-cta">
+                                <i class="ph-bold ph-arrow-right"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 4: Content Creation -->
+                    <div class="course-card card-content">
+                        <div class="card-icon-wrapper">
+                            <div class="card-icon">
+                                <i class="ph-fill ph-video-camera"></i>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <h3>Producción de Contenidos</h3>
+                            <p>Crea recursos multimedia impactantes: video, audio y diseño gráfico para redes sociales y educación online.</p>
+                        </div>
+                        <div class="card-footer">
+                            <span class="tag">Creativo</span>
+                            <div class="card-cta">
+                                <i class="ph-bold ph-arrow-right"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 5: Finance -->
+                    <div class="course-card card-finance">
+                        <div class="card-icon-wrapper">
+                            <div class="card-icon">
+                                <i class="ph-fill ph-currency-dollar"></i>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <h3>Educación Financiera</h3>
+                            <p>Desarrolla inteligencia financiera y adquiere las herramientas clave para lanzar y gestionar tu propio negocio o emprendimiento.</p>
+                        </div>
+                        <div class="card-footer">
+                            <span class="tag">Negocios</span>
+                            <div class="card-cta">
+                                <i class="ph-bold ph-arrow-right"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 6: Soft Skills -->
+                    <div class="course-card card-soft">
+                        <div class="card-icon-wrapper">
+                            <div class="card-icon">
+                                <i class="ph-fill ph-brain"></i>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <h3>Habilidades Blandas</h3>
+                            <p>Comunicación asertiva, liderazgo, trabajo en equipo y pensamiento crítico para destacar en el entorno laboral moderno.</p>
+                        </div>
+                        <div class="card-footer">
+                            <span class="tag">Esencial</span>
+                            <div class="card-cta">
+                                <i class="ph-bold ph-arrow-right"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-
-            <div class="contact-card">
-              <div class="blog-img">
-                <img src="./assets/blog-2.jpg" alt="" />
-              </div>
-              <p>Python para Data Science</p>
-              <span>
-                Domina Python y sus librerías para análisis de datos, visualización y 
-                machine learning. Ideal para profesionales en datos.
-              </span>
-
-              <div class="hero-callout">
-                <a href="./pricing.html">Ver Detalles</a>
-                <i class="ph ph-caret-right"></i>
-              </div>
-            </div>
-          </div>
         </section>
 
-        <section class="news">
-          <div class="container">
-            <h3>Más Cursos Disponibles</h3>
-          </div>
-
-          <div class="container news-items">
-            <div class="news-item">
-              <div class="news-name">
-                <p>Ciberseguridad y Ethical Hacking</p>
-              </div>
-              <div class="news-info">
-                <p>Seguridad</p>
-                <p>12 Semanas</p>
-              </div>
+        <!-- Call to Action Banner -->
+        <section class="cert-section">
+            <div class="container">
+                <div class="cert-banner">
+                    <div class="cert-content">
+                        <h2>¡Comienza tu Transformación Hoy!</h2>
+                        <p>
+                            Todos nuestros programas cuentan con certificación verificable y acompañamiento de expertos.
+                            Elige la modalidad que mejor se adapte a ti.
+                        </p>
+                        <a href="./contact.html" class="glow-btn">
+                            Solicitar Información <i class="ph-bold ph-paper-plane-right"></i>
+                        </a>
+                    </div>
+                </div>
             </div>
-
-            <div class="news-item">
-              <div class="news-name">
-                <p>Desarrollo de Aplicaciones Móviles con Flutter</p>
-              </div>
-              <div class="news-info">
-                <p>Móvil</p>
-                <p>10 Semanas</p>
-              </div>
-            </div>
-
-            <div class="news-item">
-              <div class="news-name">
-                <p>Cloud Computing con AWS</p>
-              </div>
-              <div class="news-info">
-                <p>Cloud</p>
-                <p>8 Semanas</p>
-              </div>
-            </div>
-
-            <div class="news-item">
-              <div class="news-name">
-                <p>Inteligencia Artificial y Machine Learning</p>
-              </div>
-              <div class="news-info">
-                <p>IA</p>
-                <p>12 Semanas</p>
-              </div>
-            </div>
-
-            <div class="news-item">
-              <div class="news-name">
-                <p>Administración de Bases de Datos SQL y NoSQL</p>
-              </div>
-              <div class="news-info">
-                <p>Bases de Datos</p>
-                <p>6 Semanas</p>
-              </div>
-            </div>
-
-            <div class="news-item">
-              <div class="news-name">
-                <p>DevOps y Automatización de Procesos</p>
-              </div>
-              <div class="news-info">
-                <p>DevOps</p>
-                <p>10 Semanas</p>
-              </div>
-            </div>
-
-            <div class="news-item">
-              <div class="news-name">
-                <p>Diseño UX/UI para Aplicaciones</p>
-              </div>
-              <div class="news-info">
-                <p>Diseño</p>
-                <p>8 Semanas</p>
-              </div>
-            </div>
-
-            <div class="news-item no-border">
-              <div class="news-name">
-                <p>Blockchain y Criptomonedas</p>
-              </div>
-              <div class="news-info">
-                <p>Blockchain</p>
-                <p>8 Semanas</p>
-              </div>
-            </div>
-          </div>
         </section>
 
-        <div class="divider"></div>
-
-        <footer>
-          <div class="container">
-            <div class="footer-brand">
-              <p>
-                <i class="ph-fill ph-graduation-cap"></i> EducaDigital - Educación Virtual
-              </p>
-              <div class="socials">
-                <a href="#"><i class="ph-fill ph-twitter-logo"></i></a>
-                <a href="#"><i class="ph-fill ph-facebook-logo"></i></a>
-                <a href="#"><i class="ph-fill ph-instagram-logo"></i></a>
-              </div>
-            </div>
-            <div class="footer-links">
-              <div class="footer-col">
-                <p>Cursos</p>
-                <p><a href="#">Programación Web</a></p>
-                <p><a href="#">Bases de Datos</a></p>
-                <p><a href="#">Desarrollo Móvil</a></p>
-                <p><a href="#">Cloud Computing</a></p>
-                <p><a href="#">Inteligencia Artificial</a></p>
-                <p><a href="#">Ciberseguridad</a></p>
-                <p><a href="./blog.html">Ver Todos</a></p>
-              </div>
-              <div class="footer-col">
-                <p>Empresa</p>
-                <p><a href="./company.html">Nosotros</a></p>
-                <p><a href="#">Blog</a></p>
-                <p><a href="#">Nuestro Equipo</a></p>
-                <p><a href="./contact.html">Contacto</a></p>
-                <p><a href="#">Trabaja con Nosotros</a></p>
-              </div>
-              <div class="footer-col">
-                <p>Recursos</p>
-                <p><a href="#">Preguntas Frecuentes</a></p>
-                <p><a href="#">Soporte Técnico</a></p>
-                <p><a href="#">Términos y Condiciones</a></p>
-                <p><a href="#">Política de Privacidad</a></p>
-                <p><a href="#">Certificados</a></p>
-              </div>
-              <div class="footer-col">
-                <p>Soluciones</p>
-                <p><a href="#">Para Empresas</a></p>
-                <p><a href="#">Para Instituciones</a></p>
-                <p><a href="#">Rutas de Aprendizaje</a></p>
-              </div>
-            </div>
-          </div>
-        </footer>
       </div>
     </div>
+
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="footer-brand">
+          <p>
+            <i class="ph-fill ph-graduation-cap"></i> EducaDigital - Educación Virtual
+          </p>
+          <div class="socials">
+            <a href="#"><i class="ph-fill ph-twitter-logo"></i></a>
+            <a href="#"><i class="ph-fill ph-facebook-logo"></i></a>
+            <a href="#"><i class="ph-fill ph-instagram-logo"></i></a>
+          </div>
+        </div>
+        <div class="footer-links">
+          <div class="footer-col">
+            <p>Cursos</p>
+            <p><a href="#">Programación Web</a></p>
+            <p><a href="#">Bases de Datos</a></p>
+            <p><a href="#">Desarrollo Móvil</a></p>
+            <p><a href="#">Cloud Computing</a></p>
+            <p><a href="#">Inteligencia Artificial</a></p>
+            <p><a href="#">Ciberseguridad</a></p>
+            <p><a href="./blog.html">Ver Todos</a></p>
+          </div>
+          <div class="footer-col">
+            <p>Empresa</p>
+            <p><a href="./company.html">Nosotros</a></p>
+            <p><a href="#">Blog</a></p>
+            <p><a href="#">Nuestro Equipo</a></p>
+            <p><a href="./contact.html">Contacto</a></p>
+            <p><a href="#">Trabaja con Nosotros</a></p>
+          </div>
+          <div class="footer-col">
+            <p>Recursos</p>
+            <p><a href="#">Preguntas Frecuentes</a></p>
+            <p><a href="#">Soporte Técnico</a></p>
+            <p><a href="#">Términos y Condiciones</a></p>
+            <p><a href="#">Política de Privacidad</a></p>
+            <p><a href="#">Certificados</a></p>
+          </div>
+          <div class="footer-col">
+            <p>Soluciones</p>
+            <p><a href="#">Para Empresas</a></p>
+            <p><a href="#">Para Instituciones</a></p>
+            <p><a href="#">Rutas de Aprendizaje</a></p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
   </body>
 </html>

@@ -7,17 +7,23 @@
     <title>Contacto | EducaDigital | Estamos Aquí para Ayudarte</title>
     <link rel="stylesheet" href="./css/main.css" />
     <link rel="stylesheet" href="./css/contact.css" />
+    <link rel="stylesheet" href="./css/contact-carousel.css" />
+    <link rel="stylesheet" href="./css/contact-form.css" />
     <link rel="stylesheet" href="./css/navbar.css" />
     <link rel="stylesheet" href="./css/index.css" />
     <link rel="stylesheet" href="./css/footer.css" />
     <link rel="stylesheet" href="./css/responsive.css" />
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <script src="./js/contact-carousel.js" defer></script>
+    <script src="./js/contact-form.js" defer></script>
   </head>
   <body>
     <nav class="navbar">
       <div class="container">
         <div class="navbar-logo">
-          <a href="index.html"><i class="ph-fill ph-graduation-cap"></i> EducaDigital</a>
+          <a href="index.html">
+            <img src="assets/cropped-Purple-and-Yellow-Modern-Abstract-Digital-World-Technology-Logo.svg" alt="Educa Digital" class="logo-img">
+          </a>
         </div>
         <div class="navbar-items">
           <input type="checkbox" id="hamburger-toggle" />
@@ -25,13 +31,13 @@
             <i class="ph-light ph-list"></i>
           </label>
           <ul class="navbar-links">
-            <!-- <li class="navbar-item"><a href="./pricing.html">Precios</a></li> -->
             <li class="navbar-item"><a href="./company.html">Nosotros</a></li>
+            <li class="navbar-item"><a href="./services.html">Servicios</a></li>
             <li class="navbar-item"><a href="./blog.html">Cursos</a></li>
-            <li class="navbar-item"><a href="./contact.html">Contacto</a></li>
+            <li class="navbar-item"><a href="./contact.html" class="active">Contacto</a></li>
             <li>
               <div class="btn">
-                <a href="#">Inscríbete</a>
+                <a href="./contact.html">Escríbenos</a>
               </div>
             </li>
           </ul>
@@ -46,96 +52,155 @@
         <section class="hero">
           <div class="container">
             <div class="hero-header">
-              <h1>¿Cómo podemos ayudarte?</h1>
+              <h1>Hablemos de tu Futuro</h1>
             </div>
             <div class="hero-copy">
               <p>
-                Contáctanos para obtener información sobre nuestros cursos, 
-                inscripciones, planes empresariales o cualquier consulta.
+                Estamos aquí para resolver tus dudas. Ya sea que busques potenciar tu carrera, 
+                capacitar a tu equipo o simplemente saludar, nos encantaría escucharte.
               </p>
             </div>
           </div>
         </section>
 
-        <section class="contact-cards">
+        <!-- Contact Form Section -->
+        <section class="contact-form-section">
           <div class="container">
-            <div class="contact-card">
-              <p><i class="ph ph-envelope-simple"></i> Inscripciones y Ventas</p>
-              <span>
-                Comunícate con nuestro equipo de admisiones para obtener información 
-                detallada sobre cursos, precios, planes empresariales o para solicitar 
-                una demostración de nuestra plataforma.
-              </span>
+            <div class="form-wrapper">
+              
+              <!-- Left Side: Interest Cards -->
+              <div class="interest-cards">
+                <h2 class="section-subtitle">¿Qué te interesa?</h2>
+                <p class="section-description">Selecciona las áreas que más te llamen la atención</p>
+                
+                <div class="cards-grid">
+                  <div class="interest-card" data-interest="courses">
+                    <div class="card-icon">
+                      <i class="ph-fill ph-graduation-cap"></i>
+                    </div>
+                    <div class="card-content">
+                      <h3>Desarrollo de Cursos</h3>
+                      <p>Virtuales y personalizados</p>
+                    </div>
+                    <div class="card-check">
+                      <i class="ph-fill ph-check-circle"></i>
+                    </div>
+                  </div>
 
-              <div class="hero-callout">
-                <a href="#">Contáctanos</a>
-                <i class="ph ph-caret-right"></i>
+                  <div class="interest-card" data-interest="business">
+                    <div class="card-icon">
+                      <i class="ph-fill ph-users-three"></i>
+                    </div>
+                    <div class="card-content">
+                      <h3>Capacitación Empresarial</h3>
+                      <p>Para equipos de trabajo</p>
+                    </div>
+                    <div class="card-check">
+                      <i class="ph-fill ph-check-circle"></i>
+                    </div>
+                  </div>
+
+                  <div class="interest-card" data-interest="webdev">
+                    <div class="card-icon">
+                      <i class="ph-fill ph-code"></i>
+                    </div>
+                    <div class="card-content">
+                      <h3>Desarrollo Web</h3>
+                      <p>Proyectos digitales a medida</p>
+                    </div>
+                    <div class="card-check">
+                      <i class="ph-fill ph-check-circle"></i>
+                    </div>
+                  </div>
+
+                  <div class="interest-card" data-interest="lms">
+                    <div class="card-icon">
+                      <i class="ph-fill ph-chalkboard-teacher"></i>
+                    </div>
+                    <div class="card-content">
+                      <h3>Plataformas LMS</h3>
+                      <p>Moodle y más</p>
+                    </div>
+                    <div class="card-check">
+                      <i class="ph-fill ph-check-circle"></i>
+                    </div>
+                  </div>
+                </div>
               </div>
-            </div>
 
-            <div class="contact-card">
-              <p>
-                <i class="ph-fill ph-chat-teardrop-dots"></i> Ayuda y Soporte
-              </p>
-              <span>
-                Nuestro equipo de soporte está disponible para ayudarte con problemas 
-                técnicos, dudas sobre el aula virtual o cualquier consulta relacionada 
-                con tu proceso de aprendizaje.
-              </span>
+              <!-- Right Side: Contact Form -->
+              <div class="contact-form-container">
+                <div class="form-header">
+                  <h2>Comencemos esta Conversación</h2>
+                  <p>Déjanos tus datos y nos pondremos en contacto contigo</p>
+                </div>
 
-              <div class="hero-callout">
-                <a href="#">Soporte Técnico</a>
-                <i class="ph ph-caret-right"></i>
+                <form class="elegant-form" id="contactForm" action="https://formspree.io/f/meelldqn" method="POST">
+                  <input type="hidden" id="selectedInterests" name="Áreas de Interés" value="">
+                  <input type="hidden" name="_subject" value="✉️ Nueva solicitud desde EducaDigital">
+                  <input type="hidden" name="_captcha" value="false">
+                  <input type="hidden" name="_next" value="https://educadigital.com/gracias">
+                  
+                  <div class="form-row">
+                    <div class="input-group">
+                      <label for="fullName">Nombre Completo</label>
+                      <div class="input-icon-wrapper">
+                        <i class="ph ph-user-circle"></i>
+                        <input type="text" id="fullName" name="Nombre" placeholder="Juan Pérez" required>
+                      </div>
+                    </div>
+
+                    <div class="input-group">
+                      <label for="email">Email</label>
+                      <div class="input-icon-wrapper">
+                        <i class="ph ph-envelope"></i>
+                        <input type="email" id="email" name="_replyto" placeholder="tu@email.com" required>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-row">
+                    <div class="input-group">
+                      <label for="phone">Teléfono</label>
+                      <div class="input-icon-wrapper">
+                        <i class="ph ph-phone"></i>
+                        <input type="tel" id="phone" name="Teléfono" placeholder="+57 300 000 0000">
+                      </div>
+                    </div>
+
+                    <div class="input-group">
+                      <label for="company">Empresa (Opcional)</label>
+                      <div class="input-icon-wrapper">
+                        <i class="ph ph-briefcase"></i>
+                        <input type="text" id="company" name="Empresa" placeholder="Tu empresa">
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="input-group full-width">
+                    <label for="message">¿Cómo podemos ayudarte?</label>
+                    <div class="input-icon-wrapper textarea-wrapper">
+                      <i class="ph ph-chat-teardrop-text"></i>
+                      <textarea id="message" name="Mensaje" rows="4" placeholder="Cuéntanos sobre tus objetivos y necesidades..." required></textarea>
+                    </div>
+                  </div>
+
+                  <button type="submit" class="submit-button">
+                    <span>Enviar Solicitud</span>
+                    <i class="ph-bold ph-paper-plane-tilt"></i>
+                    <div class="button-shine"></div>
+                  </button>
+
+                  <p class="form-footer-text">
+                    <i class="ph ph-lock-simple"></i>
+                    Tus datos están protegidos y nunca serán compartidos
+                  </p>
+                </form>
               </div>
+
             </div>
           </div>
         </section>
-
-        <div class="container">
-          <div class="contact-items">
-            <div class="c-item">
-              <p>Comunidad de Estudiantes</p>
-              <span>
-                Únete a nuestra comunidad de más de 5,000 estudiantes en nuestro 
-                foro exclusivo para compartir conocimientos y experiencias.
-              </span>
-              <br /><br />
-              <a href="#">Visitar Foro <i class="ph ph-arrow-up-right"></i> </a>
-            </div>
-            <div class="c-item">
-              <p>Contacto Directo</p>
-              <span>
-                Comunícate con nosotros para consultas personalizadas o información 
-                general a través de nuestro correo electrónico.
-              </span>
-              <br /><br />
-              <a href="#"><i class="ph ph-paperclip"></i> contacto@educadigital.com</a>
-            </div>
-          </div>
-
-          <div class="contact-items">
-            <div class="c-item">
-              <p>Centro de Recursos</p>
-              <span>
-                Explora guías completas, tutoriales y documentación sobre nuestros 
-                cursos y el uso de la plataforma.
-              </span>
-              <br /><br />
-              <a href="#">Ver Recursos <i class="ph ph-caret-right"></i> </a>
-            </div>
-            <div class="c-item">
-              <p>WhatsApp</p>
-              <span>
-                Contáctanos directamente por WhatsApp para respuestas rápidas a 
-                tus consultas sobre inscripciones y cursos.
-              </span>
-              <br /><br />
-              <a href="#"
-                >Escribir al WhatsApp <i class="ph ph-arrow-up-right"></i>
-              </a>
-            </div>
-          </div>
-        </div>
 
         <div class="divider"></div>
 

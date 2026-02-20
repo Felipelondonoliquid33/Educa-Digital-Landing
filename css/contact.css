@@ -1,91 +1,330 @@
+/* Contact Page Redesign */
+
+/* Hero Section Refinements */
+.contact-page .hero {
+    padding: 80px 0 40px;
+    background: radial-gradient(circle at 50% 0%, rgba(99, 102, 241, 0.15) 0%, transparent 60%);
+}
+
 .contact-page .hero-header h1 {
-    font-size: 60px;
+    font-size: clamp(2.5rem, 5vw, 4rem); /* Responsive font size */
+    margin-bottom: 20px;
+    background: linear-gradient(135deg, #1a1a1a 0%, #4f46e5 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    letter-spacing: -0.03em;
     margin-top: 30px;
 }
 
 .contact-page .hero-copy p {
-    margin: 15px auto 20px auto;
-    width: 75%;
+    font-size: 1.125rem;
+    line-height: 1.6;
+    color: var(--color-text);
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
 }
 
-.contact-cards {
-    width: 100%;
-    margin-bottom: 60px;
+/* Main Grid Layout */
+.contact-grid-section {
+    padding: 40px 0 100px;
 }
 
-.contact-cards .container {
+.main-contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr; /* Info (Left) - Form (Right) */
+    gap: 40px;
+    align-items: start;
+}
+
+/* Left Column: Info */
+.info-column {
     display: flex;
-    gap: 20px;
+    flex-direction: column;
+    gap: 24px;
 }
 
-.contact-card {
-    padding: 24px;
-    background: rgba(255, 255, 255, 0.8);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    flex: 1;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    border-radius: 15px;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+/* Highlight Card */
+.info-card.highlight-card {
+    background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+    border-radius: 20px;
+    padding: 32px;
+    color: white;
+    text-align: center;
+    box-shadow: 0 20px 40px -10px rgba(99, 102, 241, 0.4);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease;
 }
 
-.contact-card p {
-    text-align: left;
-    margin-bottom: 10px;
+.info-card.highlight-card:hover {
+    transform: translateY(-5px);
 }
 
-.contact-card p {
-    font-weight: 500;
-    letter-spacing: -0.02em;
+.info-card.highlight-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 60%);
+    pointer-events: none;
 }
 
-.contact-card span {
+.icon-box {
+    width: 64px;
+    height: 64px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    font-size: 32px;
+    backdrop-filter: blur(5px);
+}
+
+.highlight-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 12px;
+    font-weight: 700;
+}
+
+.highlight-card p {
+    font-size: 1rem;
+    opacity: 0.9;
+    margin-bottom: 24px;
     line-height: 1.5;
-    color: rgba(0, 0, 0, 0.6);
+    color: rgba(255, 255, 255, 0.9);
 }
 
-.contact-card .hero-callout {
-    margin: 40px 0 0 0;
+.highlight-card .contact-link a {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: white;
+    color: #6366f1;
+    padding: 10px 24px;
+    border-radius: 50px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.2s ease;
 }
 
-.contact-items {
+.highlight-card .contact-link a:hover {
+    background: rgba(255, 255, 255, 0.9);
+    transform: scale(1.05);
+}
+
+/* Info Grid (Small Cards) */
+.info-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+}
+
+.info-item {
+    background: white;
+    padding: 20px;
+    border-radius: 16px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
     display: flex;
-    gap: 20px;
-    margin-bottom: 20px;
+    align-items: center;
+    gap: 16px;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
 }
 
-.c-item {
-    padding: 40px;
-    flex: 1;
+.info-item:hover {
+    transform: translateX(5px);
+    border-color: #6366f1;
+    box-shadow: 0 10px 15px -3px rgba(99, 102, 241, 0.1);
 }
 
-.c-item p {
-    text-align: left;
-    font-size: 16px;
+.info-item .icon-small {
+    width: 48px;
+    height: 48px;
+    background: #f3f4f6;
+    color: #6366f1;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    flex-shrink: 0;
+}
+
+.info-item h4 {
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin-bottom: 4px;
+    color: #1a1a1a;
+}
+
+.info-item a {
+    color: #6366f1;
+    text-decoration: none;
+    font-size: 0.9rem;
     font-weight: 500;
-    margin-bottom: 5px;
 }
 
-.c-item span {
-    font-size: 14px;
-    color: rgba(0, 0, 0, 0.6);
+.info-item a:hover {
+    text-decoration: underline;
 }
 
-.c-item a {
-    color: rgba(0, 0, 0, 0.5);
-    font-size: 14px;
+/* Right Column: Form */
+.form-column {
+    background: white;
+    padding: 40px;
+    border-radius: 24px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.08); /* Smoother shadow */
+    border: 1px solid rgba(0,0,0,0.05);
 }
 
-@media(max-width: 800px) {
-    .contact-page .hero-copy p {
-        width: 100%;
+.contact-form h3 {
+    font-size: 1.75rem;
+    margin-bottom: 32px;
+    color: #1a1a1a;
+    font-weight: 700;
+    position: relative;
+    padding-bottom: 12px;
+}
+
+.contact-form h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 4px;
+    background: #6366f1;
+    border-radius: 2px;
+}
+
+.form-group {
+    margin-bottom: 24px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    color: #374151;
+}
+
+.input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-wrapper i {
+    position: absolute;
+    left: 16px;
+    color: #9ca3af;
+    font-size: 20px;
+    pointer-events: none;
+    transition: color 0.2s ease;
+}
+
+.input-wrapper.top-align i {
+    align-self: flex-start;
+    top: 16px;
+}
+
+.input-wrapper input,
+.input-wrapper select,
+.input-wrapper textarea {
+    width: 100%;
+    padding: 14px 16px 14px 48px; /* Padding-left matches icon position */
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-family: inherit;
+    color: #1a1a1a;
+    background: #f9fafb;
+    transition: all 0.2s ease;
+    outline: none;
+}
+
+.input-wrapper textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* Active States */
+.input-wrapper input:focus,
+.input-wrapper select:focus,
+.input-wrapper textarea:focus {
+    border-color: #6366f1;
+    background: white;
+    box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.1);
+}
+
+.input-wrapper:focus-within i {
+    color: #6366f1;
+}
+
+/* Submit Button */
+.submit-btn {
+    width: 100%;
+    padding: 16px;
+    background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.05rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 6px -1px rgba(99, 102, 241, 0.3);
+}
+
+.submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -3px rgba(99, 102, 241, 0.4);
+    filter: brightness(1.1);
+}
+
+.submit-btn:active {
+    transform: translateY(0);
+}
+
+/* Responsive Styles */
+@media (max-width: 900px) {
+    .main-contact-grid {
+        grid-template-columns: 1fr;
+        gap: 60px;
+    }
+    
+    .contact-page .hero-header h1 {
+        font-size: 2.5rem;
     }
 
-    .contact-cards .container {
-        flex-direction: column;
-    }
+    /* .form-column {
+         order: -1; 
+    } */
 
-    .contact-items {
+    .info-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    .info-item {
         flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+    }
+    
+    .info-item .icon-small {
+        margin-bottom: 8px;
     }
 }

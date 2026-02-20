@@ -1,0 +1,64 @@
+<svg width="800" height="600" viewBox="0 0 800 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ec4899" />
+      <stop offset="100%" stop-color="#a855f7" />
+    </linearGradient>
+    <linearGradient id="grad2" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f472b6" />
+      <stop offset="100%" stop-color="#d946ef" />
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="15" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Background Signal Waves -->
+  <g opacity="0.1">
+    <circle cx="400" cy="300" r="100" stroke="url(#grad1)" stroke-width="2" />
+    <circle cx="400" cy="300" r="150" stroke="url(#grad1)" stroke-width="2" />
+    <circle cx="400" cy="300" r="200" stroke="url(#grad1)" stroke-width="2" />
+  </g>
+
+  <!-- Main Broadcast Tower (Abstract) -->
+  <g transform="translate(320, 160)">
+    <rect x="0" y="0" width="160" height="280" rx="20" fill="white" stroke="url(#grad1)" stroke-width="2" filter="url(#glow)" />
+    
+    <!-- Camera Lens Icon -->
+    <circle cx="80" cy="80" r="40" fill="#fce7f3" />
+    <circle cx="80" cy="80" r="20" fill="url(#grad1)" />
+    
+    <!-- Audio Waveform -->
+    <path d="M40 160 L40 200" stroke="#f472b6" stroke-width="4" stroke-linecap="round" />
+    <path d="M55 150 L55 210" stroke="#f472b6" stroke-width="4" stroke-linecap="round" />
+    <path d="M70 140 L70 220" stroke="url(#grad1)" stroke-width="4" stroke-linecap="round" />
+    <path d="M85 135 L85 225" stroke="url(#grad1)" stroke-width="4" stroke-linecap="round" />
+    <path d="M100 145 L100 215" stroke="url(#grad1)" stroke-width="4" stroke-linecap="round" />
+    <path d="M115 155 L115 205" stroke="#f472b6" stroke-width="4" stroke-linecap="round" />
+    
+    <rect x="40" y="240" width="80" height="8" rx="4" fill="#f472b6" opacity="0.2" />
+  </g>
+
+  <!-- Floating Elements (Cloud/Hosting) -->
+  <g transform="translate(140, 100)">
+    <path d="M20 60 Q20 40 40 40 Q40 20 70 20 Q100 20 110 50 Q130 50 130 80 Q130 110 100 110 L40 110 Q20 110 20 80" 
+          fill="white" stroke="#e9d5ff" stroke-width="2" opacity="0.8" />
+    <circle cx="45" cy="70" r="4" fill="#a855f7" />
+    <circle cx="75" cy="60" r="4" fill="#a855f7" />
+    <circle cx="100" cy="80" r="4" fill="#a855f7" />
+  </g>
+
+  <!-- Floating Elements (Chat/Consulting) -->
+  <g transform="translate(540, 340)">
+    <rect x="0" y="0" width="140" height="100" rx="16" fill="white" stroke="#f472b6" stroke-width="2" transform="rotate(5)"/>
+    <path d="M30 40 L110 40" stroke="#e5e7eb" stroke-width="4" stroke-linecap="round" transform="rotate(5)" />
+    <path d="M30 60 L90 60" stroke="#e5e7eb" stroke-width="4" stroke-linecap="round" transform="rotate(5)" />
+    <!-- Speech Triangle -->
+    <path d="M100 100 L120 120 L125 90" fill="white" stroke="#f472b6" stroke-width="2" transform="rotate(5)" />
+  </g>
+  
+  <!-- Play Button Accent -->
+  <polygon points="600,150 640,175 600,200" fill="url(#grad2)" filter="url(#glow)" />
+  
+</svg>

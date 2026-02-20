@@ -6,19 +6,20 @@
     <meta name="author" content="EducaDigital" />
     <title>Nosotros | EducaDigital | Educación Virtual de Calidad</title>
     <link rel="stylesheet" href="./css/main.css" />
-    <link rel="stylesheet" href="./css/company.css" />
-    <link rel="stylesheet" href="/css/blog.css" />
+    <link rel="stylesheet" href="./css/nosotros.css" />
     <link rel="stylesheet" href="./css/navbar.css" />
-    <link rel="stylesheet" href="./css/index.css" />
     <link rel="stylesheet" href="./css/footer.css" />
     <link rel="stylesheet" href="./css/responsive.css" />
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <script src="./js/hero-background.js" defer></script>
   </head>
   <body>
     <nav class="navbar">
       <div class="container">
         <div class="navbar-logo">
-          <a href="index.html"><i class="ph-fill ph-graduation-cap"></i> EducaDigital</a>
+          <a href="index.html">
+            <img src="assets/cropped-Purple-and-Yellow-Modern-Abstract-Digital-World-Technology-Logo.svg" alt="Educa Digital" class="logo-img">
+          </a>
         </div>
         <div class="navbar-items">
           <input type="checkbox" id="hamburger-toggle" />
@@ -26,13 +27,13 @@
             <i class="ph-light ph-list"></i>
           </label>
           <ul class="navbar-links">
-            <!-- <li class="navbar-item"><a href="./pricing.html">Precios</a></li> -->
-            <li class="navbar-item"><a href="./company.html">Nosotros</a></li>
+            <li class="navbar-item"><a href="./company.html" class="active">Nosotros</a></li>
+            <li class="navbar-item"><a href="./services.html">Servicios</a></li>
             <li class="navbar-item"><a href="./blog.html">Cursos</a></li>
             <li class="navbar-item"><a href="./contact.html">Contacto</a></li>
             <li>
               <div class="btn">
-                <a href="#">Inscríbete</a>
+                <a href="./contact.html">Escríbenos</a>
               </div>
             </li>
           </ul>
@@ -42,127 +43,147 @@
 
     <div class="wrapper">
       <div class="radial-gradient"></div>
-      <div class="bg">
-        <img src="./assets/about-bg.png" alt="" />
+
+      <!-- New Hero Section -->
+      <section class="company-hero">
+        <div class="container">
+            <div class="hero-badge">
+                <i class="ph-fill ph-rocket-launch"></i> Innovación Educativa
+            </div>
+            <h1>Transformamos el aprendizaje<br>Impulsamos el futuro</h1>
+            <p>
+                Somos arquitectos de experiencias educativas digitales. Conectamos pedagogía y tecnología para crear soluciones de alto impacto global.
+            </p>
+        </div>
+      </section>
+
+      <!-- About Section (Based on Image info) -->
+      <section class="about-section">
+        <div class="container">
+            <div class="about-grid">
+                <!-- Text Column -->
+                <div class="about-content">
+                    <span class="section-label">Nuestra Esencia</span>
+                    <h2>¿Quiénes <span class="highlight">somos?</span></h2>
+                    
+                    <div class="about-text">
+                        <p>
+                            <strong>Educa Digital</strong> es una empresa especializada en diseñar 
+                            soluciones educativas apoyadas en tecnología. Acompañamos a 
+                            personas, organizaciones, instituciones y empresas en su transformación digital.
+                        </p>
+                        <p>
+                            A través de cursos, contenidos interactivos, plataformas virtuales y experiencias innovadoras,
+                            combinamos <strong>pedagogía, tecnología y diseño</strong> para ofrecer educación accesible, atractiva y efectiva.
+                        </p>
+                    </div>
+
+                    <div class="about-highlight-box">
+                        <p>"Creemos en el poder de la educación para transformar vidas y sociedades a través de la innovación digital."</p>
+                    </div>
+                </div>
+
+                <!-- Image Column -->
+                <div class="about-image-wrapper">
+                    <div class="blob-1"></div>
+                    <div class="blob-2"></div>
+                    <div class="main-image-card">
+                         <!-- Using a professional office/meeting image -->
+                        <img src="https://images.unsplash.com/photo-1531545514256-b1400bc00f31?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Equipo Educa Digital">
+                    </div>
+                </div>
+            </div>
+        </div>
+      </section>
+
+      <!-- Values / Pillars Section -->
+      <section class="values-section">
+          <div class="container">
+              <div style="text-align: center; max-width: 600px; margin: 0 auto;">
+                  <span class="section-label">Nuestros Pilares</span>
+                  <h2>Soportados en la Excelencia</h2>
+                  <p style="color: var(--text-secondary);">Nuestra metodología integra los componentes esenciales para el éxito educativo.</p>
+              </div>
+
+              <div class="values-grid">
+                  <div class="value-card">
+                      <div class="value-icon">
+                          <i class="ph-duotone ph-book-open-text"></i>
+                      </div>
+                      <h3>Pedagogía Sólida</h3>
+                      <p>Fundamentamos cada solución en modelos pedagógicos probados para garantizar el aprendizaje real.</p>
+                  </div>
+                  <div class="value-card">
+                      <div class="value-icon">
+                          <i class="ph-duotone ph-desktop-tower"></i>
+                      </div>
+                      <h3>Tecnología de Punta</h3>
+                      <p>Implementamos las últimas herramientas digitales para crear entornos robustos y escalables.</p>
+                  </div>
+                  <div class="value-card">
+                      <div class="value-icon">
+                          <i class="ph-duotone ph-paint-brush-broad"></i>
+                      </div>
+                      <h3>Diseño Funcional</h3>
+                      <p>Creamos experiencias de usuario intuitivas y atractivas que facilitan la navegación y el estudio.</p>
+                  </div>
+              </div>
+          </div>
+      </section>
+
+      <!-- Trajectory & Partnerships Section (New Requirement) -->
+      <div class="container" style="margin-top: 80px;">
+        <div class="trajectory-container">
+            <div class="trajectory-bg"></div>
+            
+            <div class="trajectory-content">
+                 <div class="trajectory-text">
+                     <span class="section-label" style="color: #a5f3fc;">Aliados y Visión</span>
+                     <h2>Amplitud de Mercado y Solidez</h2>
+                     <p>
+                         Construimos el futuro de la educación con alianzas estratégicas sólidas. 
+                         Nuestra metodología innovadora nos permite ofrecer soluciones integrales 
+                         y escalables, diseñadas para impactar positivamente en diversos sectores desde el primer día.
+                     </p>
+                     
+                     <!-- Partners Grid (Icons) -->
+                     <div class="partners-grid" style="justify-content: flex-start; margin-top: 20px; opacity: 0.8; filter: none;">
+                         <i class="ph-fill ph-microsoft-logo" style="color: white; opacity: 0.7;"></i>
+                         <i class="ph-fill ph-google-logo" style="color: white; opacity: 0.7;"></i>
+                         <i class="ph-fill ph-chalkboard-teacher" style="color: white; opacity: 0.7;"></i>
+                         <i class="ph-fill ph-buildings" style="color: white; opacity: 0.7;"></i>
+                     </div>
+                 </div>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <span class="stat-number"><i class="ph-duotone ph-lightning"></i></span>
+                    <span class="stat-label">Innovación Ágil</span>
+                    <p style="color: #cbd5e1; font-size: 0.9rem; margin-top: 10px; line-height: 1.4;">Adaptamos rápidamente las últimas tendencias tecnológicas.</p>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number"><i class="ph-duotone ph-users-three"></i></span>
+                    <span class="stat-label">Enfoque Humano</span>
+                    <p style="color: #cbd5e1; font-size: 0.9rem; margin-top: 10px; line-height: 1.4;">Priorizamos la experiencia del usuario en cada desarrollo.</p>
+                </div>
+                 <div class="stat-item">
+                    <span class="stat-number"><i class="ph-duotone ph-check-fat"></i></span>
+                    <span class="stat-label">Calidad Total</span>
+                    <p style="color: #cbd5e1; font-size: 0.9rem; margin-top: 10px; line-height: 1.4;">Estándares internacionales en diseño instruccional.</p>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number"><i class="ph-duotone ph-chart-line-up"></i></span>
+                    <span class="stat-label">Resultados</span>
+                    <p style="color: #cbd5e1; font-size: 0.9rem; margin-top: 10px; line-height: 1.4;">Creación de valor real para tu organización.</p>
+                </div>
+            </div>
+        </div>
       </div>
 
-      <div class="page-content company-page">
-        <section class="hero">
-          <div class="container">
-            <div class="about-hero">
-              <h1>Transformando vidas a través de la educación digital</h1>
-              <p>
-                En EducaDigital creemos que la educación de calidad debe ser accesible 
-                para todos. Por eso hemos desarrollado una plataforma de aprendizaje 
-                virtual que acerca las oportunidades del mundo digital a cada rincón 
-                de Latinoamérica.
-              </p>
-              <p>
-                Nuestra plataforma ha evolucionado desde un simple sistema de cursos 
-                en línea hasta convertirse en un ecosistema completo de formación 
-                profesional. Ofrecemos programas en tecnología, programación y 
-                habilidades digitales que preparan a nuestros estudiantes para los 
-                desafíos del mercado laboral actual.
-              </p>
-              <p>
-                Actualmente, miles de profesionales y estudiantes en toda Colombia 
-                y Latinoamérica confían en EducaDigital para su desarrollo profesional 
-                y actualización de competencias.
-              </p>
-            </div>
-          </div>
-        </section>
+      <div class="divider"></div>
 
-        <div class="divider"></div>
-
-        <section class="team">
-          <div class="container">
-            <h3>Nuestro Equipo</h3>
-
-            <div class="team-content">
-              <div class="team-copy">
-                <h1>Nos apasiona la excelencia educativa</h1>
-                <p>
-                  EducaDigital cuenta con un equipo diverso de profesionales 
-                  comprometidos con la educación de calidad. Nuestros instructores 
-                  son expertos en sus campos con experiencia real en la industria. 
-                  Lo que nos une es nuestra pasión por la enseñanza, la innovación 
-                  educativa y el compromiso con el éxito de cada estudiante. 
-                  Cuidamos cada detalle del proceso de aprendizaje.
-                </p>
-                <div class="hero-callout">
-                  <a href="#">Conoce nuestro equipo</a>
-                  <i class="ph ph-caret-right"></i>
-                </div>
-              </div>
-              <div class="team-img">
-                <img src="./assets/team.png" alt="" />
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section class="news">
-          <div class="container">
-            <h3>Noticias y Actualizaciones</h3>
-          </div>
-
-          <div class="container news-items">
-            <div class="news-item">
-              <div class="news-name">
-                <p>Nuevos Cursos de Inteligencia Artificial</p>
-              </div>
-              <div class="news-info">
-                <p>Anuncio</p>
-                <p>Enero 15, 2026</p>
-              </div>
-            </div>
-
-            <div class="news-item">
-              <div class="news-name">
-                <p>Alianza con Empresas del Sector TI</p>
-              </div>
-              <div class="news-info">
-                <p>Noticias</p>
-                <p>Diciembre 10, 2025</p>
-              </div>
-            </div>
-
-            <div class="news-item">
-              <div class="news-name">
-                <p>Certificación Internacional en Cloud Computing</p>
-              </div>
-              <div class="news-info">
-                <p>Educación</p>
-                <p>Noviembre 20, 2025</p>
-              </div>
-            </div>
-
-            <div class="news-item">
-              <div class="news-name">
-                <p>Programa de Becas para Estudiantes Destacados</p>
-              </div>
-              <div class="news-info">
-                <p>Oportunidades</p>
-                <p>Octubre 05, 2025</p>
-              </div>
-            </div>
-
-            <div class="news-item no-border">
-              <div class="news-name">
-                <p>Expansión de Cursos en Ciberseguridad</p>
-              </div>
-              <div class="news-info">
-                <p>Anuncio</p>
-                <p>Septiembre 15, 2025</p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <div class="divider"></div>
-
-        <footer>
+      <footer>
           <div class="container">
             <div class="footer-brand">
               <p>
