@@ -1,0 +1,28 @@
+# Dependencies
+node_modules/
+
+# Python
+__pycache__/
+*.py
+*.pyc
+.Python
+
+# Mac
+.DS_Store
+
+# Git
+.git/
+.gitignore
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+*.log
+npm-debug.log*
+
+# Misc
+update_logos.py
